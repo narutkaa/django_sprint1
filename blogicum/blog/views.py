@@ -45,6 +45,7 @@ posts = [
     },
 ]
 
+
 def index(request):
     """Главная страница / Лента записей"""
     context = {'posts': posts}
