@@ -50,6 +50,7 @@ def index(request):
     context = {'posts': posts}
     return render(request, 'blog/index.html', context)
 
+
 def post_detail(request, id):
     """Отображение полного описания выбранной записи"""
     post = [post for post in posts if post['id'] == id]
@@ -57,6 +58,7 @@ def post_detail(request, id):
         raise Http404('Вы указали неверный id')
     context = {'post': post[0]}
     return render(request, 'blog/detail.html', context)
+
 
 def category_posts(request, category_slug):
     """Отображение публикаций категории"""
